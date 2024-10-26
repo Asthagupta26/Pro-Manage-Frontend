@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 import axios from 'axios';
-// import config from '../../config';
+
 
 export const registerUser = async (userDetails) => {
   const { name, email, password } = userDetails;
@@ -41,7 +41,7 @@ export const loginUser = async (userDetails) => {
 };
 export const updateUserName = async (email, name) => {
   try {
-    const reqUrl = `${backendUrl}/api/v1/auth/update/name?email=${
+    const reqUrl = `${import.meta.env.VITE_BACKEND_URL}/api/v1/auth/update/name?email=${
       email || ''
     }&name=${name || ''}`;
     const response = await axios.put(reqUrl, { email, name });
@@ -54,7 +54,7 @@ export const updateUserName = async (email, name) => {
 
 export const updateUserDetails = async (email, userData) => {
   try {
-    const reqUrl = `${backendUrl}/api/v1/auth/update/userDetails?email=${
+    const reqUrl = `${import.meta.env.VITE_BACKEND_URL}/api/v1/auth/update/userDetails?email=${
       email || ''
     }`;
     const response = await axios.put(reqUrl, userData);
