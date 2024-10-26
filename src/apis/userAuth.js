@@ -1,11 +1,11 @@
 /* eslint-disable no-undef */
 import axios from 'axios';
-import config from '../../config';
+// import config from '../../config';
 
 export const registerUser = async (userDetails) => {
   const { name, email, password } = userDetails;
 
-  const reqUrl = `${config.backendUrl}/api/v1/auth/register`;
+  const reqUrl = `${import.meta.env.VITE_BACKEND_URL}/api/v1/auth/register`; 
 
   try {
     const response = await axios.post(reqUrl, { name, email, password });
@@ -24,7 +24,7 @@ export const registerUser = async (userDetails) => {
 export const loginUser = async (userDetails) => {
   const { email, password } = userDetails;
   try {
-    const reqUrl = `${config.backendUrl}/api/v1/auth/login`;
+    const reqUrl = `${import.meta.env.VITE_BACKEND_URL}/api/v1/auth/login`;
     const response = await axios.post(reqUrl, { email, password });
     localStorage.setItem('proManageToken', response?.data?.token);
     localStorage.setItem('email', response?.data?.email);
@@ -41,7 +41,7 @@ export const loginUser = async (userDetails) => {
 };
 export const updateUserName = async (email, name) => {
   try {
-    const reqUrl = `${config.backendUrl}/api/v1/auth/update/name?email=${
+    const reqUrl = `${backendUrl}/api/v1/auth/update/name?email=${
       email || ''
     }&name=${name || ''}`;
     const response = await axios.put(reqUrl, { email, name });
@@ -54,7 +54,7 @@ export const updateUserName = async (email, name) => {
 
 export const updateUserDetails = async (email, userData) => {
   try {
-    const reqUrl = `${config.backendUrl}/api/v1/auth/update/userDetails?email=${
+    const reqUrl = `${backendUrl}/api/v1/auth/update/userDetails?email=${
       email || ''
     }`;
     const response = await axios.put(reqUrl, userData);

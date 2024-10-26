@@ -1,5 +1,5 @@
 import axios from 'axios';
-import config from '../../config';
+// import config from '../../config';
 
 export const saveTask = async ({
   title,
@@ -13,7 +13,7 @@ export const saveTask = async ({
   user,
 }) => {
   try {
-    const reqUrl = `${config.backendUrl}/api/v1/task/add`;
+    const reqUrl = `${import.meta.env.VITE_BACKEND_URL}/api/v1/task/add`;  
 
     const response = await axios.post(reqUrl, {
       title,
@@ -35,7 +35,7 @@ export const saveTask = async ({
 
 export const getTask = async (category, timeStamp, user) => {
   try {
-    const reqUrl = `${config.backendUrl}/api/v1/task/getTask?category=${
+    const reqUrl = `${import.meta.env.VITE_BACKEND_URL}/api/v1/task/getTask?category=${
       category || ''
     }&timeStamp=${timeStamp || ''}&createdBy=${user || ''}`;
 
@@ -49,7 +49,7 @@ export const getTask = async (category, timeStamp, user) => {
 
 export const updateTaskQueueById = async (taskId, queue) => {
   try {
-    const reqUrl = `${config.backendUrl}/api/v1/task/updateQueue?id=${
+    const reqUrl = `${import.meta.env.VITE_BACKEND_URL}/api/v1/task/updateQueue?id=${
       taskId || ''
     }&queue=${queue || ''}`;
 
@@ -66,7 +66,7 @@ export const updateTaskQueueById = async (taskId, queue) => {
 
 export const fetchTaskById = async (taskId) => {
   try {
-    const reqUrl = `${config.backendUrl}/api/v1/task/getOne?id=${taskId || ''}`;
+    const reqUrl = `${import.meta.env.VITE_BACKEND_URL}/api/v1/task/getOne?id=${taskId || ''}`;
 
     const response = await axios.get(reqUrl);
 
@@ -78,7 +78,7 @@ export const fetchTaskById = async (taskId) => {
 
 export const updateTask = async (id, taskData) => {
   try {
-    const reqUrl = `${config.backendUrl}/api/v1/task/update?id=${id || ''}`;
+    const reqUrl = `${import.meta.env.VITE_BACKEND_URL}/api/v1/task/update?id=${id || ''}`;
 
     const response = await axios.put(reqUrl, taskData);
     return response;
@@ -89,7 +89,7 @@ export const updateTask = async (id, taskData) => {
 
 export const deleteTask = async (id) => {
   try {
-    const reqUrl = `${config.backendUrl}/api/v1/task/delete?id=${id || ''}`;
+    const reqUrl = `${import.meta.env.VITE_BACKEND_URL}/api/v1/task/delete?id=${id || ''}`;
 
     const response = await axios.delete(reqUrl);
 
@@ -101,7 +101,7 @@ export const deleteTask = async (id) => {
 
 export const getDetails = async (user) => {
   try {
-    const reqUrl = `${config.backendUrl}/api/v1/task/getAnalyticsDetails?user=${
+    const reqUrl = `${import.meta.env.VITE_BACKEND_URL}/api/v1/task/getAnalyticsDetails?user=${
       user || ''
     }`;
 
@@ -116,7 +116,7 @@ export const getDetails = async (user) => {
 
 export const addUser = async (email) => {
   try {
-    const reqUrl = `${config.backendUrl}/api/v1/task/addUser?email=${
+    const reqUrl = `${import.meta.env.VITE_BACKEND_URL}/api/v1/task/addUser?email=${
       email || ''
     }`;
 
@@ -131,7 +131,7 @@ export const addUser = async (email) => {
 
 export const getAssignee = async () => {
   try {
-    const reqUrl = `${config.backendUrl}/api/v1/task/getAssignee`;
+    const reqUrl = `${import.meta.env.VITE_BACKEND_URL}/api/v1/task/getAssignee`;
 
     const response = await axios.get(reqUrl);
 
