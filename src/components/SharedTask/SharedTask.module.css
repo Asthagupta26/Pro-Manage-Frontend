@@ -1,0 +1,149 @@
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border: 1px solid red; */
+}
+
+.box {
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  margin: 1rem 0rem;
+  padding: 0.3rem 0rem 0.3rem 1rem;
+  box-sizing: border-box;
+  /* border: 1px solid saddlebrown; */
+}
+
+.heading {
+  text-align: center;
+  font-size: medium;
+  margin-left: 1rem;
+}
+
+
+.task {
+  width: 50%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #EDF5FE;
+  border-radius: 10px;
+}
+
+.innerBox {
+  width: 90%;
+  height: 90%;
+  position: relative;
+}
+
+.boxOne {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  font-size: x-small;
+  margin: 3% 0%;
+}
+
+.boxTwo {
+  margin: 3% 0%;
+  font-size: x-large;
+}
+
+.checklistBox {
+  width: 100%;
+  height: 48%;
+  font-size: small;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+
+.checklist {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: small;
+  font-weight: bold;
+  margin: 3% 0%;
+}
+
+.taskBox {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0.3rem 0rem;
+  margin: 0.5rem 0rem;
+  font-size: small;
+  border: 1px solid #E2E2E2;
+  border-radius: 10px;
+}
+
+.checkbox {
+  margin: 0.4rem 0.3rem;
+}
+
+.taskInput {
+  width: 90%;
+  font-weight: bold;
+}
+
+.dueDate {
+  display: flex;
+  align-items: center;
+  font-size: small;
+  font-weight: bold;
+  margin: 2% 0%;
+}
+
+.taskStatus {
+  box-sizing: border-box;
+  border: none;
+  border-radius: 5px;
+  background-color: #DBDBDB;
+  padding: 3%;
+  margin: 1%;
+  cursor: pointer;
+}
+
+.statusBox {
+  display: flex;
+  justify-content: flex-end;
+  width: 70%;
+  box-sizing: border-box;
+}
+
+.dateStatus {
+  border: none;
+  border-radius: 5px;
+  background-color: #CF3636;
+  padding: 1.5%;
+  margin: 1%;
+  color: #FFFFFF;
+  font-size: x-small;
+}
+
+.priority {
+  margin-left: 0.3rem;
+}
+
+.taskNotFound {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  height: 100%;
+}
+
+@media (max-width:550px) {
+  .task {
+    width: 80%;
+  }
+}

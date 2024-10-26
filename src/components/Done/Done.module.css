@@ -1,0 +1,197 @@
+.container {
+    height: 100%;
+    width: 22.5rem;
+    background-color: #EEF2F5;
+    border-radius: 10px;
+    padding: 0rem 1rem 0rem 1.5rem;
+    overflow-y: scroll;
+}
+
+.headingBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.heading {
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: left;
+}
+
+.collapse,
+.popUpDots,
+.expandCollapse {
+    cursor: pointer;
+}
+
+.taskContainer {
+    height: 90%;
+}
+
+.task {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    margin: 1rem 0.25rem 0rem 0rem;
+    border-radius: 20px;
+    padding: 1.5rem;
+}
+
+.innerBox {
+    width: 100%;
+    position: relative;
+}
+
+.boxOne {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.priorityText {
+    font-family: Poppins;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 12px;
+    text-align: left;
+    margin-left: 5px;
+}
+
+.assignedTo {
+    background-color: #FFEBEB;
+    border-radius: 50%;
+    padding: 0.3rem;
+    margin-left: 0.2rem;
+    cursor: pointer;
+    font-size: 9px;
+    font-weight: 400;
+    line-height: 9.11px;
+    letter-spacing: 0.5px;
+}
+
+.popUp {
+    width: 131px;
+    position: absolute;
+    right: 0px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 2px 22px 0px #7E7A7A40;
+    padding: 1.5rem 0rem 1.5rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    align-items: flex-start;
+    z-index: 1;
+}
+
+.edit,
+.share,
+.delete {
+    background: none;
+    border: none;
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+    text-align: left;
+    cursor: pointer;
+}
+
+.delete {
+    color: #CF3636;
+}
+
+.title {
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 27px;
+    text-align: left;
+    margin-top: 8px;
+}
+
+.checklist {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1.5rem 0rem;
+}
+
+.checklistHeading {
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.94px;
+    text-align: left;
+}
+
+.expandCollapse {
+    width: 20px;
+    height: 20px;
+}
+
+.taskBox {
+    display: flex;
+    gap: 10px;
+    padding: 0.75rem 0rem 0.75rem 0.75rem;
+    margin: 0.4rem 0rem;
+    border: 1px solid #E2E2E2;
+    border-radius: 12px;
+}
+
+.taskInput {
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.94px;
+    text-align: left;
+}
+
+.lastBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.dateStatus {
+    border: none;
+    border-radius: 8px;
+    padding: 5px 10px;
+    font-family: Poppins;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 12px;
+    text-align: left;
+    background-color: #63C05B;
+}
+
+.queueOptions {
+    box-sizing: border-box;
+    border: none;
+    border-radius: 8px;
+    background-color: #DBDBDB;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-family: Poppins;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 12px;
+    text-align: left;
+}
+
+
+.queueBox {
+    display: flex;
+    justify-content: flex-end;
+    gap: 6px;
+    width: 70%;
+    box-sizing: border-box;
+}

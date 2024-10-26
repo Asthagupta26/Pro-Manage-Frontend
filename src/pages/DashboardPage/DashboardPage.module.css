@@ -1,0 +1,91 @@
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+}
+
+.sidebar {
+  height: 100%;
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: #474444;
+  border-right: 2px solid #EEF2F5;
+}
+
+.subContainer {
+  width: 100%;
+}
+
+.box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 1.5rem 0rem;
+  padding: 0.75rem 0rem 0.75rem 2.5rem;
+  box-sizing: border-box;
+}
+
+.heading {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: left;
+  margin-left: 1rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.button {
+  margin-left: 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+  color: #000000;
+}
+
+.buttonGrey {
+  margin-left: 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+  color: #707070;
+}
+
+.buttonContainer {
+  height: 35%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.logout {
+  width: 50%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  color: #CF3636;
+  cursor: pointer;
+  gap: 1rem;
+}
+
+.logoutButton {
+  color: #CF3636;
+  background: none;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+}
