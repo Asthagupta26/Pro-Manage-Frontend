@@ -191,7 +191,7 @@ function Backlog({ trigger, setTrigger, timeStamp }) {
                                         </button>
 
                                         <CopyToClipboard
-                                            text={`http://localhost:5173/sharedtask/${item._id}`}
+                                            text={`https://extraordinary-douhua-62ecc6.netlify.app/sharedtask/${item._id}`}
                                             onCopy={() =>
                                                 toast.success('Link Copied', {
                                                     position: 'top-right',
