@@ -126,6 +126,7 @@ function Backlog({ trigger, setTrigger, timeStamp }) {
         if (result === true) {
             setTrigger(!trigger);
         }
+        window.location.reload();
     };
     const handleDelete = (taskId) => {
         setTaskToDelete(taskId);
