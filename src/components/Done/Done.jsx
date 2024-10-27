@@ -295,24 +295,7 @@ function Done({ trigger, setTrigger, timeStamp }) {
                                 <div className={styles.lastBox}>
                                     {item?.dueDate !== null ? (
                                         <span
-                                            style={{
-                                                background:
-                                                    months.indexOf(item?.dueDate?.split(' ')[0]) <
-                                                        months.indexOf(month) ||
-                                                        (months.indexOf(item?.dueDate?.split(' ')[0]) ===
-                                                            months.indexOf(month) &&
-                                                            Number(item?.dueDate?.split(' ')[1]) < day)
-                                                        ? '#CF3636'
-                                                        : '#DBDBDB',
-                                                color:
-                                                    months.indexOf(item?.dueDate?.split(' ')[0]) <
-                                                        months.indexOf(month) ||
-                                                        (months.indexOf(item?.dueDate?.split(' ')[0]) ===
-                                                            months.indexOf(month) &&
-                                                            Number(item?.dueDate?.split(' ')[1]) < day)
-                                                        ? 'white'
-                                                        : 'black',
-                                            }}
+                                           
                                             className={styles.dateStatus}
                                         >
                                             {item?.dueDate}

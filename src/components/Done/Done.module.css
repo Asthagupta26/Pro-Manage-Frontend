@@ -170,7 +170,8 @@
     font-weight: 500;
     line-height: 12px;
     text-align: left;
-    background-color: #63C05B;
+    background: #63C05B ;
+    color: white;
 }
 
 .queueOptions {
