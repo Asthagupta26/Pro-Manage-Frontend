@@ -13,7 +13,6 @@ const App = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/dashboard" element={<DashboardPage />} />
-
         <Route path="/sharedtask/:id" element={<SharedTask />} />
       </Routes>
     </BrowserRouter>

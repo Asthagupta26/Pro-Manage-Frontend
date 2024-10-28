@@ -1,5 +1,4 @@
-import axios from 'axios';
-// import config from '../../config';
+import axios from "axios";
 
 export const saveTask = async ({
   title,
@@ -13,7 +12,7 @@ export const saveTask = async ({
   user,
 }) => {
   try {
-    const reqUrl = `${import.meta.env.VITE_BACKEND_URL}/api/v1/task/add`;  
+    const reqUrl = `${import.meta.env.VITE_BACKEND_URL}/api/v1/task/add`;
 
     const response = await axios.post(reqUrl, {
       title,
@@ -27,7 +26,7 @@ export const saveTask = async ({
       user,
     });
 
-    localStorage.setItem('isTaskCreated', response?.data?.isTaskCreated);
+    localStorage.setItem("isTaskCreated", response?.data?.isTaskCreated);
   } catch (error) {
     console.log(error);
   }
@@ -35,9 +34,11 @@ export const saveTask = async ({
 
 export const getTask = async (category, timeStamp, user) => {
   try {
-    const reqUrl = `${import.meta.env.VITE_BACKEND_URL}/api/v1/task/getTask?category=${
-      category || ''
-    }&timeStamp=${timeStamp || ''}&createdBy=${user || ''}`;
+    const reqUrl = `${
+      import.meta.env.VITE_BACKEND_URL
+    }/api/v1/task/getTask?category=${category || ""}&timeStamp=${
+      timeStamp || ""
+    }&createdBy=${user || ""}`;
 
     const response = await axios.get(reqUrl);
     let result = Array.from(response?.data?.data);
@@ -49,14 +50,14 @@ export const getTask = async (category, timeStamp, user) => {
 
 export const updateTaskQueueById = async (taskId, queue) => {
   try {
-    const reqUrl = `${import.meta.env.VITE_BACKEND_URL}/api/v1/task/updateQueue?id=${
-      taskId || ''
-    }&queue=${queue || ''}`;
+    const reqUrl = `${
+      import.meta.env.VITE_BACKEND_URL
+    }/api/v1/task/updateQueue?id=${taskId || ""}&queue=${queue || ""}`;
 
     const response = await axios.put(reqUrl);
 
     if (response?.data?.updated === true) {
-      localStorage.setItem('queue', queue);
+      localStorage.setItem("queue", queue);
     }
     return response?.data?.updated;
   } catch (error) {
@@ -66,7 +67,9 @@ export const updateTaskQueueById = async (taskId, queue) => {
 
 export const fetchTaskById = async (taskId) => {
   try {
-    const reqUrl = `${import.meta.env.VITE_BACKEND_URL}/api/v1/task/getOne?id=${taskId || ''}`;
+    const reqUrl = `${import.meta.env.VITE_BACKEND_URL}/api/v1/task/getOne?id=${
+      taskId || ""
+    }`;
 
     const response = await axios.get(reqUrl);
 
@@ -78,7 +81,9 @@ export const fetchTaskById = async (taskId) => {
 
 export const updateTask = async (id, taskData) => {
   try {
-    const reqUrl = `${import.meta.env.VITE_BACKEND_URL}/api/v1/task/update?id=${id || ''}`;
+    const reqUrl = `${import.meta.env.VITE_BACKEND_URL}/api/v1/task/update?id=${
+      id || ""
+    }`;
 
     const response = await axios.put(reqUrl, taskData);
     return response;
@@ -89,7 +94,9 @@ export const updateTask = async (id, taskData) => {
 
 export const deleteTask = async (id) => {
   try {
-    const reqUrl = `${import.meta.env.VITE_BACKEND_URL}/api/v1/task/delete?id=${id || ''}`;
+    const reqUrl = `${import.meta.env.VITE_BACKEND_URL}/api/v1/task/delete?id=${
+      id || ""
+    }`;
 
     const response = await axios.delete(reqUrl);
 
@@ -101,9 +108,9 @@ export const deleteTask = async (id) => {
 
 export const getDetails = async (user) => {
   try {
-    const reqUrl = `${import.meta.env.VITE_BACKEND_URL}/api/v1/task/getAnalyticsDetails?user=${
-      user || ''
-    }`;
+    const reqUrl = `${
+      import.meta.env.VITE_BACKEND_URL
+    }/api/v1/task/getAnalyticsDetails?user=${user || ""}`;
 
     const response = await axios.get(reqUrl);
 
@@ -116,9 +123,9 @@ export const getDetails = async (user) => {
 
 export const addUser = async (email) => {
   try {
-    const reqUrl = `${import.meta.env.VITE_BACKEND_URL}/api/v1/task/addUser?email=${
-      email || ''
-    }`;
+    const reqUrl = `${
+      import.meta.env.VITE_BACKEND_URL
+    }/api/v1/task/addUser?email=${email || ""}`;
 
     const response = await axios.post(reqUrl);
     console.log(response);
@@ -131,7 +138,9 @@ export const addUser = async (email) => {
 
 export const getAssignee = async () => {
   try {
-    const reqUrl = `${import.meta.env.VITE_BACKEND_URL}/api/v1/task/getAssignee`;
+    const reqUrl = `${
+      import.meta.env.VITE_BACKEND_URL
+    }/api/v1/task/getAssignee`;
 
     const response = await axios.get(reqUrl);
 

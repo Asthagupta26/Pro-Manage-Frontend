@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* border: 1px solid red; */
+ 
 }
 
 .box {
@@ -15,7 +15,7 @@
   margin: 1rem 0rem;
   padding: 0.3rem 0rem 0.3rem 1rem;
   box-sizing: border-box;
-  /* border: 1px solid saddlebrown; */
+ 
 }
 
 .heading {
@@ -24,7 +24,6 @@
   margin-left: 1rem;
 }
 
-
 .task {
   width: 50%;
   height: 60%;
@@ -32,7 +31,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 2px solid #EDF5FE;
+  border: 2px solid #edf5fe;
   border-radius: 10px;
 }
 
@@ -81,7 +80,7 @@
   padding: 0.3rem 0rem;
   margin: 0.5rem 0rem;
   font-size: small;
-  border: 1px solid #E2E2E2;
+  border: 1px solid #e2e2e2;
   border-radius: 10px;
 }
 
@@ -106,7 +105,7 @@
   box-sizing: border-box;
   border: none;
   border-radius: 5px;
-  background-color: #DBDBDB;
+  background-color: #dbdbdb;
   padding: 3%;
   margin: 1%;
   cursor: pointer;
@@ -122,10 +121,8 @@
 .dateStatus {
   border: none;
   border-radius: 5px;
-  background-color: #CF3636;
   padding: 1.5%;
   margin: 1%;
-  color: #FFFFFF;
   font-size: x-small;
 }
 
@@ -142,7 +139,7 @@
   height: 100%;
 }
 
-@media (max-width:550px) {
+@media (max-width: 550px) {
   .task {
     width: 80%;
   }

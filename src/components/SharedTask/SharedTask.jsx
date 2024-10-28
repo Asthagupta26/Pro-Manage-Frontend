@@ -15,6 +15,7 @@ function SharedTask() {
   const [month, setMonth] = useState("");
   const { id } = useParams();
   const [taskNotFound, setTaskNotFound] = useState(false);
+  const currentDate = new Date();
 
   const months = [
     "Jan",
@@ -42,17 +43,26 @@ function SharedTask() {
     console.log(result);
     if (!result) {
       setTaskNotFound(true);
-      console.log(taskNotFound)
+      console.log(taskNotFound);
     } else {
       setTaskDetails(result);
       setTaskNotFound(false);
     }
-    console.log(taskNotFound)
+    console.log(taskNotFound);
+  };
+  const formatToIndianDate = (dateString) => {
+    const date = new Date(dateString);
+    const options = {
+      month: "short",
+      day: "numeric",
+      timeZone: "Asia/Kolkata",
+    };
+    return date.toLocaleDateString("en-US", options);
   };
 
   return (
     <>
-      {taskNotFound ?
+      {taskNotFound ? (
         <>
           <div className={styles.taskNotFound}>
             <h2>404</h2>
@@ -60,7 +70,8 @@ function SharedTask() {
             <h2>Task Not Found or Deleted</h2>
           </div>
         </>
-        : <div className={styles.container}>
+      ) : (
+        <div className={styles.container}>
           <div className={styles.box}>
             <img src={codesandbox} />
             <h1 className={styles.heading}>Pro Manage</h1>
@@ -68,11 +79,15 @@ function SharedTask() {
           <div className={styles.task}>
             <div className={styles.innerBox}>
               <div className={styles.boxOne}>
-                {taskDetails?.priority === "Low" && <img src={lowPriorityImg} />}
+                {taskDetails?.priority === "Low" && (
+                  <img src={lowPriorityImg} />
+                )}
                 {taskDetails?.priority === "Moderate" && (
                   <img src={moderatePriorityImg} />
                 )}
-                {taskDetails?.priority === "High" && <img src={highPriorityImg} />}
+                {taskDetails?.priority === "High" && (
+                  <img src={highPriorityImg} />
+                )}
                 <span className={styles.priority}>
                   {taskDetails?.priority?.toUpperCase()} PRIORITY
                 </span>
@@ -120,7 +135,21 @@ function SharedTask() {
               {taskDetails?.dueDate !== null ? (
                 <div className={styles.dueDate}>
                   <p className={styles.dateStyle}>Due Date</p>
-                  <span className={styles.dateStatus}>{taskDetails?.dueDate}</span>
+                  <span
+                    style={{
+                      background:
+                        currentDate > new Date(taskDetails?.dueDate)
+                          ? "#CF3636"
+                          : "#DBDBDB",
+                      color:
+                        currentDate > new Date(taskDetails?.dueDate)
+                          ? "white"
+                          : "black",
+                    }}
+                    className={styles.dateStatus}
+                  >
+                    {formatToIndianDate(taskDetails?.dueDate)}
+                  </span>
                 </div>
               ) : (
                 <span></span>
@@ -128,10 +157,10 @@ function SharedTask() {
             </div>
             <ToastContainer />
           </div>
-        </div >
-      }
+        </div>
+      )}
     </>
-  )
+  );
 }
 
 export default SharedTask;

@@ -23,7 +23,11 @@ const Analytics = () => {
   const renderDataBlock = (label, value) => (
     <div className={styles.data}>
       <div className={styles.info}>
-        <img src={analytics} alt={`${label} icon`} className={styles.analyticsImg} />
+        <img
+          src={analytics}
+          alt={`${label} icon`}
+          className={styles.analyticsImg}
+        />
         {label}
       </div>
       <span className={styles.value}>{value}</span>
@@ -34,7 +38,6 @@ const Analytics = () => {
     <div className={styles.container}>
       <div className={styles.heading}>Analytics</div>
       <div className={styles.subContainer}>
-        {/* Box One */}
         <div className={styles.boxOne}>
           <div className={styles.subBoxOne}>
             {renderDataBlock("Backlog Tasks", info?.backlogTasks)}
@@ -43,8 +46,6 @@ const Analytics = () => {
             {renderDataBlock("Completed Tasks", info?.completedTasks)}
           </div>
         </div>
-
-        {/* Box Two */}
         <div className={styles.boxTwo}>
           <div className={styles.subBoxTwo}>
             {renderDataBlock("Low Priority", info?.lowPriority)}

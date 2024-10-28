@@ -5,7 +5,6 @@
     overflow: auto;
 
 }
-
 .nameDisplay,
 .heading {
     width: 100%;
@@ -16,9 +15,6 @@
     padding: 0rem 0.5rem;
     box-sizing: border-box;
 }
-
-
-
 .welcomeMessage {
     font-family: "Poppins", sans-serif !important;
     font-size: 22px;
@@ -27,7 +23,6 @@
     text-align: left;
     padding-top: 0.75rem;
 }
-
 .date {
     color: #707070;
     margin-right: 2rem;
@@ -37,12 +32,10 @@
     line-height: 30px;
     text-align: left;
 }
-
 .board {
     display: flex;
     align-items: center;
 }
-
 .boardHead {
     font-family: Poppins;
     font-size: 29px;
@@ -50,7 +43,6 @@
     line-height: 43.5px;
     text-align: left;
 }
-
 .addPeople {
     color: #707070;
     margin-left: 1rem;
@@ -58,7 +50,6 @@
     display: flex;
     align-items: center;
 }
-
 .addPeopleText {
     font-family: Poppins;
     font-size: 14px;
@@ -67,7 +58,6 @@
     text-align: left;
     margin-left: 5px;
 }
-
 .selectTime {
     border: none;
     font-family: Poppins;
@@ -78,7 +68,6 @@
     margin-right: 2rem;
     border-radius: 12px;
 }
-
 .option {
     border: none;
     font-family: Poppins;
@@ -87,7 +76,6 @@
     line-height: 21px;
     text-align: left;
 }
-
 .tasksContainer {
     height: 83%;
     width: max-content;
@@ -96,5 +84,4 @@
     align-items: center;
     padding-bottom: 0.5rem;
     gap: 1.5rem;
-
 }

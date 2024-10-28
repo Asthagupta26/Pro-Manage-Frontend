@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 import styles from "./Board.module.css";
 import addPeopleImg from "../../assets/icons/addPeople.png";
 import AddPeople from "../AddPeople/AddPeople";
@@ -9,27 +9,33 @@ import ToDo from "../ToDo/ToDo";
 
 const Board = () => {
   const name = localStorage.getItem("name");
-
   const [day, setDay] = useState(() => {
     const today = new Date();
     return today.getDate();
   });
-
   const [month, setMonth] = useState(() => {
     const today = new Date();
     const months = [
-      "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", 
-      "Aug", "Sep", "Oct", "Nov", "Dec",
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
     ];
     return months[today.getMonth()];
   });
 
   const [year, setYear] = useState(() => new Date().getFullYear());
-
   const [trigger, setTrigger] = useState(true);
   const [addPeople, setAddPeople] = useState(false);
   const [timeStamp, setTimeStamp] = useState("This Week");
-
   const handleAddPeople = () => setAddPeople(true);
 
   const handleTimeStampChange = (e) => {
@@ -38,8 +44,6 @@ const Board = () => {
       setTimeStamp(value);
     }
   };
-
-
   return (
     <div className={styles.container}>
       <div className={styles.nameDisplay}>
@@ -48,7 +52,6 @@ const Board = () => {
           {day} {month}, {year}
         </span>
       </div>
-
       <div className={styles.heading}>
         <div className={styles.board}>
           <div className={styles.boardHead}>Board</div>
@@ -57,7 +60,6 @@ const Board = () => {
             <span className={styles.addPeopleText}>Add People</span>
           </span>
         </div>
-
         <select
           className={styles.selectTime}
           type="text"
@@ -76,8 +78,6 @@ const Board = () => {
           </option>
         </select>
       </div>
-
-
       <div className={styles.tasksContainer}>
         <Backlog
           trigger={trigger}
@@ -92,11 +92,9 @@ const Board = () => {
         />
         <Done trigger={trigger} setTrigger={setTrigger} timeStamp={timeStamp} />
       </div>
-
-
       {addPeople && <AddPeople setAddPeople={setAddPeople} />}
     </div>
-  )
-}
+  );
+};
 
-export default Board
+export default Board;

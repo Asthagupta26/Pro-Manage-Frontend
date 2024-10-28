@@ -22,11 +22,9 @@ function Delete({ setDeleteVal, taskToDelete, trigger, setTrigger }) {
       <div className={styles.subContainer}>
         <div className={styles.innerBox}>
           <p>Are you sure you want to Delete?</p>
-
           <button onClick={() => handleDelete()} className={styles.delete}>
             Yes, Delete
           </button>
-
           <button onClick={handleCancel} className={styles.cancel}>
             Cancel
           </button>

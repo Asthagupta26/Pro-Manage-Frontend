@@ -1,5 +1,4 @@
 import React from "react";
-
 import styles from "./User.module.css";
 
 function User({ user, setUser, setAddPeople }) {

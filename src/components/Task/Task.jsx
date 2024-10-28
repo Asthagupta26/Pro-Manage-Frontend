@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from "react";
 import { saveTask, updateTask, getAssignee } from "../../apis/task";
 import styles from "./Task.module.css";
@@ -36,7 +35,9 @@ const Task = ({ setTask, taskDetails, setTaskDetails }) => {
     localStorage.removeItem("isTaskCreated");
 
     if (taskDetails?._id) {
-      setChecklist(Array.from({ length: taskDetails?.tasks.length }, (_, i) => i));
+      setChecklist(
+        Array.from({ length: taskDetails?.tasks.length }, (_, i) => i)
+      );
       updatePriorityBackground();
     }
 
@@ -121,7 +122,9 @@ const Task = ({ setTask, taskDetails, setTaskDetails }) => {
     setChecklist(updatedChecklist);
 
     const updatedTasks = taskData.tasks.filter((_, i) => i !== index);
-    const updatedCheckedTasks = taskData.checkedTasks.filter((_, i) => i !== index);
+    const updatedCheckedTasks = taskData.checkedTasks.filter(
+      (_, i) => i !== index
+    );
     const updatedCheckedNumber = taskData.checkedTasks[index]
       ? taskData.checkedNumber - 1
       : taskData.checkedNumber;
@@ -150,10 +153,7 @@ const Task = ({ setTask, taskDetails, setTaskDetails }) => {
   };
 
   const selectDueDate = (date) => {
-    date = String(date);
-    let dateArray = date.split(" ");
-    let str = dateArray[1] + " " + dateArray[2] + " " + dateArray[3];
-    setTaskData({ ...taskData, ["dueDate"]: str });
+    setTaskData({ ...taskData, ["dueDate"]: date });
   };
 
   const handleAssigneeChange = (event) => {
@@ -193,7 +193,6 @@ const Task = ({ setTask, taskDetails, setTaskDetails }) => {
       setTask(false);
       window.location.reload();
     }, 3000);
-
   };
 
   const showToast = (message) => {
@@ -280,7 +279,6 @@ const Task = ({ setTask, taskDetails, setTaskDetails }) => {
             </select>
           </div>
 
-
           <label className={styles.label}>
             Checklist ({taskData.checkedNumber}/{checklist.length})
             <span className={styles.asterisk}>*</span>
@@ -302,7 +300,11 @@ const Task = ({ setTask, taskDetails, setTaskDetails }) => {
                     onChange={(event) => handleTaskChange(event, item)}
                   />
                 </span>
-                <img src={deleteIcon} alt="delete" onClick={() => removeTask(item)} />
+                <img
+                  src={deleteIcon}
+                  alt="delete"
+                  onClick={() => removeTask(item)}
+                />
               </div>
             ))}
           </div>
