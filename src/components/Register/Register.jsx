@@ -159,7 +159,7 @@ const Register = () => {
                   onChange={handleChange}
                 />
                 <div style={{ cursor: "pointer" }} onClick={togglePasswordVisibility}>
-                  {passwordShown ? <img src={show} className={styles.icon} /> : <img src={hide} className={styles.icon} />}
+                  {passwordShown ? <img src={hide} className={styles.icon} /> : <img src={show} className={styles.icon} />}
                 </div>
               </div>
               {errors.password && (
@@ -180,7 +180,7 @@ const Register = () => {
                   onChange={handleChange}
                 />
                 <div style={{ cursor: "pointer" }} onClick={toggleConfirmPasswordVisibility}>
-                  {confirmPasswordShown ? <img src={show} className={styles.icon} /> : <img src={hide} className={styles.icon} />}
+                  {confirmPasswordShown ? <img src={hide} className={styles.icon} /> : <img src={show} className={styles.icon} />}
                 </div>
               </div>
               {errors.confirmPassword && (

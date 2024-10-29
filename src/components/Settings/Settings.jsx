@@ -145,7 +145,7 @@ function Settings() {
             type={passwordShown ? "text" : "password"}
           />
           <div style={{ cursor: "pointer" }} onClick={togglePasswordVisibility}>
-            {passwordShown ? <img src={show} className={styles.icon} /> : <img src={hide} className={styles.icon} />}
+            {passwordShown ? <img src={hide} className={styles.icon} /> : <img src={show} className={styles.icon} />}
           </div>
         </div>
 
@@ -160,7 +160,7 @@ function Settings() {
             type={newPasswordShown ? "text" : "password"}
           />
           <div style={{ cursor: "pointer" }} onClick={toggleNewPasswordVisibility}>
-            {newPasswordShown ? <img src={show} className={styles.icon} /> : <img src={hide} className={styles.icon} />}
+            {newPasswordShown ? <img src={hide} className={styles.icon} /> : <img src={show} className={styles.icon} />}
           </div>
         </div>
 

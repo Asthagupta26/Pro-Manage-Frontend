@@ -7,11 +7,33 @@
   width: 100%;
   background-color: #17a2b8;
   color: white;
+  gap: 4.5rem;
 }
 
 .welcomeImg {
   margin-bottom: 1%;
+  position: absolute;
+  top: 57px;
+  left: 15px;
 }
+
 .heading {
   margin-top: 1%;
+}
+
+.image {
+  position: relative;
+  top: -150px;
+  left: -150px;
+}
+
+.backImg {
+  position: absolute;
+  top: 0px;
+}
+
+.content {
+  position: relative;
+  top: 150px;
+  text-align: center;
 }
