@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./AuthLayout.module.css";
 import welcome from "../../assets/images/welcome.png";
-import back from "../../assets/images/back.png";
+import back from "../../assets/images/Back.png";
 
 function AuthLayout() {
   return (
